@@ -94,7 +94,25 @@ int main()
         }
         cubeWidth = 10;
         horizontalOffset = 1 * cubeWidth;
+
         // 2nd CUBE
+        for (float cubeX = -cubeWidth; cubeX < cubeWidth; cubeX += incrementSpeed)
+        {
+            for (float cubeY = -cubeWidth; cubeY < cubeWidth;
+                 cubeY += incrementSpeed)
+            {
+                calculateForSurface(cubeX, cubeY, -cubeWidth, '@');
+                calculateForSurface(cubeWidth, cubeY, cubeX, '$');
+                calculateForSurface(-cubeWidth, cubeY, -cubeX, '~');
+                calculateForSurface(-cubeX, cubeY, cubeWidth, '#');
+                calculateForSurface(cubeX, -cubeWidth, -cubeY, ';');
+                calculateForSurface(cubeX, cubeWidth, cubeY, '+');
+            }
+        }
+        cubeWidth = 5;
+        horizontalOffset = 8 * cubeWidth;
+
+        // 3rd CUBE
         for (float cubeX = -cubeWidth; cubeX < cubeWidth; cubeX += incrementSpeed)
         {
             for (float cubeY = -cubeWidth; cubeY < cubeWidth;
