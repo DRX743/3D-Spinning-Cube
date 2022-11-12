@@ -1,6 +1,16 @@
 #include <stdio.h>
 #include <math.h>
 
+// Global Variables
+float cubeWidth = 20;
+int width = 160, height = 44;
+float zBuffer[160 * 44];
+char buffer[160 * 44];
+int backgroundASCIICode = '.';
+int distanceFromCam = 100;
+float horizontalOffset;
+float K1 = 40;
+
 // Based on the formula (Formula.png)
 float A, B, C;
 
@@ -28,6 +38,7 @@ float calculateZ(int i, int j, int k)
 // Main
 int main()
 {
-    printf("Hello World \n");
+    printf("\x1b[2J"); //\x1b is the ASCII for ESCAPE (literally the ESC key on your keyboard). [2K is the command "erase the current line"
+    while (1){};
     return 0;
 }
