@@ -19,6 +19,12 @@ float calculateY(int i, int j, int k)
            i * cos(B) * sin(C);
 }
 
+// Calculate Z axis
+float calculateZ(int i, int j, int k)
+{
+    return k * cos(A) * cos(B) - j * sin(A) * cos(B) + i * sin(B);
+}
+
 // Main
 int main()
 {
